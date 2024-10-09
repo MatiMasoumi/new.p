@@ -10,12 +10,12 @@ class Manager:
         new_task.start_task()
         print(f"Task '{title}' add ok")
     def mark_task_done(self, task_id):
-             if task_id in self.tasks:
-                 self.tasks[task_id].mark_as_done()
-                 print(f"Task '{self.tasks[task_id].title}'
-                       ' is mark")
-            else:
-                 print("not found") 
+        if task_id in self.tasks:
+            self.tasks[task_id].mark_as_done()
+            print(f"Task '{self.tasks[task_id].title}'
+                     ' is mark")
+        else:
+            print("not found") 
     def display_tasks(self):
          if not self.tasks:
              print("is not task") 
