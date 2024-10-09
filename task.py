@@ -1,5 +1,5 @@
 import datetime
-class task:
+class Task:
     def __init__(self,title,description,task_id):
         self.title=title
         self.description=description
