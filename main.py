@@ -1,4 +1,4 @@
-from manager import Manager
+from manager import*
 def main():
      manager = Manager() 
      while True: 
@@ -9,12 +9,12 @@ def main():
         print("5. exit") 
         choice = input("choose an option") 
         if choice == '1':
-             title = input("enter task title ") 
-             description = input("enter task description ")
-             task_id = input("enter unique task id ") 
-             try:
-                 manager.add_task(title, description, task_id)
-                 print('task added')
+            title = input("enter task title ") 
+            description = input("enter task description ")
+            task_id = input("enter unique task id ") 
+            try:
+                manager.add_task(title, description, task_id)
+                print('task added')
             except ValueError as e:
                  print(e)
         elif choice == '2':
@@ -23,12 +23,12 @@ def main():
         elif choice == '3':
             manager.display_tasks()
         elif choice == '4':
-            new_func(manager) 
+            manager.task_summary()
         elif choice == '5':
             print("exit..")
             break
         else:
             print("please try again") 
 
-    if __name__ == "__main__":
+     if __name__ == "__main__":
        main()
